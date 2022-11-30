@@ -1,2 +1,2 @@
 # TypeScript
-Repositorio para testar e desenvolver aplicações usando Typescript
+Repositorio para testar e desenvolver aplicações usando Typescript e Node.js
