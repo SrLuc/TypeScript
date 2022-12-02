@@ -197,5 +197,22 @@ let naoSei4: unknown = {};
 //console.log(typeof(naoSei4));
 
 //void type  (oposto do tipo any e é a ausência de qualquer tipo)
-function exemploFuncao(): void {}
-const exemploFuncao2 = () => {};
+function exemploFuncao(): void {};
+const exemploFuncao2 = ():void => {};
+const logErrorExample = (errorMensage:string):void => {console.log(errorMensage);}; 
+
+//esta dando erro por conta de uma regra do json que precisa ser desabilitada => stricksnullchecks
+let variavel:void;
+variavel = null;
+variavel = undefined;
+//variavel = 1;
+//variavel = 'ola mundo';
+
+//null type (variavel que o valor é vazio ou inexistente ou seja null);
+let variavelTestenulc = null;
+//console.log(typeof(variavelTestenulc));
+
+
+//undefined type (representa variaveis nao inicializadas, nao definidas)
+let varialtesteundeefined;
+//console.log(typeof(varialtesteundeefined));
