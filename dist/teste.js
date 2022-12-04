@@ -60,13 +60,13 @@ const trans = quitandaArray.map((element) => element.toUpperCase());
 let car;
 car = { name: "Subaro", price: 120.0, year: "2022" };
 let device;
-(device = {
+device = {
     serie: "J8",
     id: 65165,
     model: "Samsumg",
     number1: "+55988745214",
     number2: "+558199874517",
-}),
+},
     {
         serie: "XR",
         id: 34322,
@@ -115,6 +115,7 @@ let listFruits = [
     "orange",
 ];
 let listFruits2 = [5, true, ...listFruits];
+let listFruits3 = [...listFruits, 'testando', 123];
 //enum type
 var Langauge;
 (function (Langauge) {
@@ -179,3 +180,27 @@ let variavelTestenulc = null;
 //undefined type (representa variaveis nao inicializadas, nao definidas)
 let varialtesteundeefined;
 //console.log(typeof(varialtesteundeefined));
+//function type
+function digitar(tecla) {
+    //funcao nome(parametro:tipo):retorno{};	
+}
+const teclar = function (digito) {
+    //const nome = funcao(parametro:tipo):retorno{};
+};
+//arrow function
+const flecha = (ali) => console.log('batendo aqui' + `${ali}`);
+const minerar = (bloco) => console.log('minerando. . ');
+//Optitional parameters type
+function informar(email) { email != undefined ? console.log('email') : ""; }
+;
+//default parameters
+function desconto(valor, taxa1 = 0.9, taxa2 = 0.95) {
+    return (valor * taxa1 + valor * taxa2) - valor;
+}
+console.log(desconto(100));
+//rest parameters type
+function somar(...numero) {
+    let total = 0;
+    numero.forEach((element) => total += element);
+    return total;
+}

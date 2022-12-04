@@ -59,6 +59,7 @@ function chamarQuitandaArray(item: string[]) {
 		console.log(item[i]);
 	}
 }
+
 //chamarQuitandaArray(quitandaArray);
 
 //array operation functions
@@ -82,13 +83,13 @@ let device: {
 	number2: string;
 };
 
-(device = {
+device = {
 	serie: "J8",
 	id: 65165,
 	model: "Samsumg",
 	number1: "+55988745214",
 	number2: "+558199874517",
-}),
+},
 	{
 		serie: "XR",
 		id: 34322,
@@ -145,6 +146,7 @@ let listFruits: [string, ...string[]] = [
 	"orange",
 ];
 let listFruits2: [number, boolean, ...string[]] = [5, true, ...listFruits];
+let listFruits3:[...string[], string, number] = [...listFruits, 'testando', 123];
 
 //enum type
 enum Langauge {
@@ -212,7 +214,39 @@ variavel = undefined;
 let variavelTestenulc = null;
 //console.log(typeof(variavelTestenulc));
 
-
 //undefined type (representa variaveis nao inicializadas, nao definidas)
 let varialtesteundeefined;
 //console.log(typeof(varialtesteundeefined));
+
+//function type
+function digitar(tecla:string):void{
+//funcao nome(parametro:tipo):retorno{};	
+}
+
+const teclar = function(digito:string):void{
+//const nome = funcao(parametro:tipo):retorno{};
+}
+
+//arrow function
+const flecha = (ali:string) => console.log('batendo aqui'+ `${ali}`);
+const minerar =(bloco:boolean) => console.log('minerando. . ');
+
+//Optitional parameters type
+function informar(email?:string){email != undefined ? console.log('email') : "";};
+
+//default parameters
+function desconto(valor:number, taxa1 = 0.9, taxa2 = 0.95):number{
+	return (valor *taxa1 + valor *taxa2) - valor;  
+}
+
+console.log(desconto(100));
+
+
+//rest parameters type
+function somar(...numero:number[]){
+	let total = 0;
+	numero.forEach((element) => total += element);
+	return total;
+}
+
+
