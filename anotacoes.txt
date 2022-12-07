@@ -1,0 +1,5 @@
+typescript adiciona confiabilidade ao programa, diminui a quantidade de bugs, consequentemente perdemos menos tempos com debug
+
+o comando node index.js roda no terminal cmd/kernel
+o comando tsc index.ts rodad no console virtual web
+
