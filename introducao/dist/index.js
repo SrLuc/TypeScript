@@ -1,29 +1,38 @@
+"use strict";
 function somar(num1, num2) {
-    return console.log(num1 + num2);
-    ;
+    return num1 + num2;
 }
-somar(1, 2);
+console.log(somar(5, 2));
 function falarNome(nome) {
     return console.log('ola ' + nome);
 }
 falarNome('ruan');
 function areaTriangulo(base, altura) {
-    return console.log(base * altura / 2);
+    return base * altura / 2;
 }
-areaTriangulo(7, 7);
+console.log(areaTriangulo(7, 7));
 function caixaAlta(substantivo) {
-    return console.log(substantivo.toLocaleUpperCase());
+    return substantivo.toLocaleUpperCase();
 }
-caixaAlta('ruan rickelme');
+console.log(caixaAlta('ruan rickelme'));
 function arredondar(numero) {
-    return console.log(numero.toPrecision(2));
+    return numero.toPrecision(2);
 }
-arredondar(4.343533);
+console.log(arredondar(4.343533));
 function dizerTipo(item) {
-    return console.log(typeof (item));
+    return typeof (item);
 }
-dizerTipo('5');
-/*  Comando para compilar ts => js
-    node index.js
-    tsc index.ts
-*/
+console.log(dizerTipo(5));
+function desafioDois(item) {
+    let novoItem = item.toString();
+    return novoItem;
+}
+console.log('o numero do desafio 2 é:' + desafioDois(10));
+function tiposArray() {
+    //o tipo any diz que a (variavel/parametro) pode receber qualquer tipo de dado, ou seja, any lembra a tipagem fraca
+    let listaLetras = ['frutas', 'vegatais', 'hortalicas', 'verduras', 'grãos'];
+    let listaNumeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+    let listaBool = [true, false, false, false, true];
+    return console.log(listaLetras, listaNumeros, listaBool);
+}
+tiposArray();

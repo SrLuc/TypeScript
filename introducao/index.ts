@@ -1,28 +1,38 @@
-function somar(num1:number, num2:number) {
-    return console.log(num1 + num2);;
-}   somar(1,2);
+function somar(num1:number, num2:number):number {
+    return num1 + num2;
+}   console.log(somar(5,2));
 
 function falarNome(nome:unknown){
     return console.log('ola ' + nome);
 }   falarNome('ruan');
 
-function areaTriangulo(base:number, altura:number){
-    return console.log(base*altura/2);
-}   areaTriangulo(7,7);
+function areaTriangulo(base:number, altura:number):number{
+    return base*altura/2;
+}   console.log(areaTriangulo(7,7));
 
-function caixaAlta(substantivo:string){
-    return console.log(substantivo.toLocaleUpperCase());
-}   caixaAlta('ruan rickelme');
+function caixaAlta(substantivo:string):string{
+    return substantivo.toLocaleUpperCase();
+}   console.log(caixaAlta('ruan rickelme'));
 
-function arredondar(numero:number){
-    return console.log(numero.toPrecision(2));
-}   arredondar(4.343533);
+function arredondar(numero:number):string{
+    return numero.toPrecision(2);
+}   console.log(arredondar(4.343533));
 
-function dizerTipo(item:string){
-    return console.log(typeof(item));
-}   dizerTipo('5');
+function dizerTipo(item:unknown):unknown{
+    return typeof(item);
+}   console.log(dizerTipo(5));
 
-/*  Comando para compilar ts => js
-    node index.js
-    tsc index.ts
-*/
+function desafioDois(item:number):string{
+    let novoItem = item.toString();
+    return novoItem;
+}   console.log('o numero do desafio 2 é:' + desafioDois(10));
+
+function tiposArray():void{
+    //o tipo any diz que a (variavel/parametro) pode receber qualquer tipo de dado, ou seja, any lembra a tipagem fraca
+    let listaLetras: string[] = ['frutas', 'vegatais', 'hortalicas', 'verduras', 'grãos'];
+    let listaNumeros:number[] = [1,2,3,4,5,6,7,8,9,0];
+    let listaBool:boolean[] = [true, false, false, false, true];
+    return console.log(listaLetras , listaNumeros, listaBool);
+}   tiposArray();
+
+

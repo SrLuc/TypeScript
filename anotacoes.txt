@@ -3,3 +3,9 @@ typescript adiciona confiabilidade ao programa, diminui a quantidade de bugs, co
 o comando node index.js roda no terminal cmd/kernel
 o comando tsc index.ts rodad no console virtual web
 
+type annotation é quando definimos um tipo de dado manualmente
+type inference é quando o t idfentifica e define o tipo de dado para nós
+
+o comando tsc -w serve para compilar automaticamente
+
+arrays tem tipos fixos, tipo, arrays de numeros, array de strings => number[], string[], boolean[]
