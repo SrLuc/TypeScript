@@ -9,3 +9,5 @@ type inference é quando o t idfentifica e define o tipo de dado para nós
 o comando tsc -w serve para compilar automaticamente
 
 arrays tem tipos fixos, tipo, arrays de numeros, array de strings => number[], string[], boolean[]
+
+quando uma propriedade é opcional precisamos criar uma validação, a condicional if
