@@ -48,9 +48,12 @@ function cordenadas(valores) {
 const valor = { x: 343, y: 135 };
 console.log(valor);
 function usuario(nome, email) {
-    console.log("ola " + nome);
-    if (email != undefined) {
-        console.log("ola " + nome + " seu email é " + email);
-    }
+    email != undefined ? console.log("ola " + nome + " seu email é " + email) : console.log("ola " + nome);
 }
 usuario('ruan', 'gatinho003@typescript.dot');
+usuario('bobinho');
+const corpo = document.querySelector('html');
+const botao = document.getElementById('btn');
+botao === null || botao === void 0 ? void 0 : botao.addEventListener('click', function change() {
+    corpo === null || corpo === void 0 ? void 0 : corpo.classList.toggle('theme');
+});
