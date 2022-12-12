@@ -99,3 +99,4 @@ console.log("direction is " + place("right"));
 console.log("direction is " + place("front"));
 console.log("direction is " + place("back"));
 
+//encerrando modulo 1, 2 e 3
