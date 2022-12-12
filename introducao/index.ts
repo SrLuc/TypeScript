@@ -26,7 +26,7 @@ console.log(arredondar(4.343533));
 function dizerTipo(item: unknown): unknown {
 	return typeof item;
 }
-console.log(dizerTipo(5));
+console.log(dizerTipo("5"));
 
 function desafioDois(item: number): string {
 	let novoItem = item.toString();
@@ -34,11 +34,13 @@ function desafioDois(item: number): string {
 }
 console.log("o numero do desafio 2 é:" + desafioDois(10));
 
+//arrays types
+
 function tiposArray(): void {
 	//o tipo any diz que a (variavel/parametro) pode receber qualquer tipo de dado, ou seja, any lembra a tipagem fraca
 	let listaLetras: string[] = [
 		"frutas",
-		"vegatais",
+		"vegetais",
 		"hortalicas",
 		"verduras",
 		"grãos",
@@ -49,20 +51,51 @@ function tiposArray(): void {
 }
 tiposArray();
 
-function cordenadas(valores: { x: number; y: number }) {
-	console.log("valor x = " + valores.x + "valor y = " + valores.y);
-}
-const valor = { x: 343, y: 135 };
-console.log(valor);
+//optional type
 
 function usuario(nome: string, email?: string) {
-	email != undefined ? console.log("ola " + nome + " seu email é " + email) : console.log("ola " + nome);
+	email != undefined
+		? console.log("ola " + nome + " seu email é " + email)
+		: console.log("ola " + nome);
 }
-usuario('ruan','gatinho003@typescript.dot');
-usuario('bobinho');
+usuario("ruan", "gatinho003@typescript.dot");
+usuario("bobinho");
 
-const corpo = document.querySelector('html');
-const botao = document.getElementById('btn');
-botao?.addEventListener('click', function change(){
-	corpo?.classList.toggle('theme');
-});
+//type alias + union type
+//type ID = type alias   number | string = union types
+type ID = number | string;
+//type ID = boolean
+function uniao(element: ID) {
+	return console.log("tipo do elemento: " + typeof element);
+}
+uniao(2);
+uniao("2");
+
+//interface type é semelhante ao type alias
+
+interface localizacao {
+	x: number;
+	y: number;
+}
+
+const cordenada: localizacao = {
+	x: 10,
+	y: 15,
+};
+
+function localizar(lugar: localizacao) {
+	return console.log(lugar);
+}
+
+localizar(cordenada);
+
+//LITERAL TYPE restringe os tipos de dados a valores e não apenas tipos
+function place(direction: "left" | "right" | "front" | "back") {
+	return direction;
+}
+
+console.log("direction is " + place("left"));
+console.log("direction is " + place("right"));
+console.log("direction is " + place("front"));
+console.log("direction is " + place("back"));
+

@@ -22,17 +22,18 @@ console.log(arredondar(4.343533));
 function dizerTipo(item) {
     return typeof item;
 }
-console.log(dizerTipo(5));
+console.log(dizerTipo("5"));
 function desafioDois(item) {
     let novoItem = item.toString();
     return novoItem;
 }
 console.log("o numero do desafio 2 é:" + desafioDois(10));
+//arrays types
 function tiposArray() {
     //o tipo any diz que a (variavel/parametro) pode receber qualquer tipo de dado, ou seja, any lembra a tipagem fraca
     let listaLetras = [
         "frutas",
-        "vegatais",
+        "vegetais",
         "hortalicas",
         "verduras",
         "grãos",
@@ -42,18 +43,33 @@ function tiposArray() {
     return console.log(listaLetras, listaNumeros, listaBool);
 }
 tiposArray();
-function cordenadas(valores) {
-    console.log("valor x = " + valores.x + "valor y = " + valores.y);
-}
-const valor = { x: 343, y: 135 };
-console.log(valor);
+//optional type
 function usuario(nome, email) {
-    email != undefined ? console.log("ola " + nome + " seu email é " + email) : console.log("ola " + nome);
+    email != undefined
+        ? console.log("ola " + nome + " seu email é " + email)
+        : console.log("ola " + nome);
 }
-usuario('ruan', 'gatinho003@typescript.dot');
-usuario('bobinho');
-const corpo = document.querySelector('html');
-const botao = document.getElementById('btn');
-botao === null || botao === void 0 ? void 0 : botao.addEventListener('click', function change() {
-    corpo === null || corpo === void 0 ? void 0 : corpo.classList.toggle('theme');
-});
+usuario("ruan", "gatinho003@typescript.dot");
+usuario("bobinho");
+//type ID = boolean
+function uniao(element) {
+    return console.log("tipo do elemento: " + typeof element);
+}
+uniao(2);
+uniao("2");
+const cordenada = {
+    x: 10,
+    y: 15,
+};
+function localizar(lugar) {
+    return console.log(lugar);
+}
+localizar(cordenada);
+//LITERAL TYPE restringe os tipos de dados a valores e não apenas tipos
+function place(direction) {
+    return direction;
+}
+console.log("direction is " + place("left"));
+console.log("direction is " + place("right"));
+console.log("direction is " + place("front"));
+console.log("direction is " + place("back"));

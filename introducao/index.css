@@ -6,38 +6,3 @@
     outline: none;
 }
 
-:root{
-    --corPrimaria: black;
-}
-
-.theme:root{
-    --corPrimaria: gray;
-}
-
-body{
-    background-color: var(--corPrimaria);
-    color: aliceblue;
-    display: flex;
-    justify-content: center;
-}
-
-.container{
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 15%;
-    border-radius: 10%;
-    border: 1px dashed yellow;
-}
-
-.container h3{
-    text-align: center;
-}
-
-.container button{
-    display: flex;
-    width: 20%;
-    justify-content: center;
-    margin-left: 40%;
-    margin-top: 5%;
-}

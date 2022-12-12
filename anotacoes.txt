@@ -4,10 +4,21 @@ o comando node index.js roda no terminal cmd/kernel
 o comando tsc index.ts rodad no console virtual web
 
 type annotation é quando definimos um tipo de dado manualmente
-type inference é quando o t idfentifica e define o tipo de dado para nós
+type inference é quando o typescript identifica e define o tipo de dado para nós, como o javascript faz
 
 o comando tsc -w serve para compilar automaticamente
 
 arrays tem tipos fixos, tipo, arrays de numeros, array de strings => number[], string[], boolean[]
 
-quando uma propriedade é opcional precisamos criar uma validação, a condicional if
+quando uma propriedade é opcional precisamos criar uma validação, com a condicional if, se x for != de undefined
+
+union type é quando um item pode receber mais de um tipo de dado, por exemplo const ano: string | number;
+
+type alias é criar um tipo de dado que pode ser usado como type annotation
+type ID = number | string
+é usado para diminuir sentenças e reduzir a sintaxe de funções
+
+interfaces é como criar um tipo de dado, com meus proprios parametros e que pode ser usado como type annotation de variaveis e afins, ou seja, é bem parecido com type alias
+
+a unica diferença entra type alias e interface é que a interface pode ser alterada ao longo do codigo, ja o alias não
+
