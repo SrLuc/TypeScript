@@ -38,6 +38,7 @@ operarNumeros([1, 2, 3]);
 operarNumeros([2, 3, 1], "+");
 operarNumeros([1, 4], "-");
 operarNumeros([4, 4, 2], "*");
+//exercicio de logica de programação
 function exibirData(dia, mes, ano) {
     switch (mes) {
         case 1 || "1":
@@ -84,3 +85,27 @@ function exibirData(dia, mes, ano) {
         : "";
 }
 exibirData(12, 12, 2022);
+//uso do instaceof
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+}
+class SuperUser extends User {
+    constructor(name, email) {
+        super(name, email);
+    }
+}
+const ruan = new User("Ruan", "ruandev@code.blitz");
+const paulo = new SuperUser("paulo", "paulo@go.net");
+function chamarPessoa(user) {
+    if (user instanceof SuperUser) {
+        console.log(`ola, seja bem vindo ${user.name}`);
+    }
+    else if (user instanceof User) {
+        console.log(`ola ${user.email}, seja bem vindo ${user.name}`);
+    }
+}
+chamarPessoa(ruan);
+chamarPessoa(paulo);

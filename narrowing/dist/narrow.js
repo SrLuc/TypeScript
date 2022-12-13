@@ -1,4 +1,17 @@
 // 1 - type guard
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 function somarNumeros(x, y) {
     if (typeof x === "string" && typeof y === "string") {
         var resultado = parseFloat(x) + parseFloat(y);
@@ -37,6 +50,7 @@ operarNumeros([1, 2, 3]);
 operarNumeros([2, 3, 1], "+");
 operarNumeros([1, 4], "-");
 operarNumeros([4, 4, 2], "*");
+//exercicio de logica de programação
 function exibirData(dia, mes, ano) {
     switch (mes) {
         case 1 || "1":
@@ -83,3 +97,30 @@ function exibirData(dia, mes, ano) {
         : "";
 }
 exibirData(12, 12, 2022);
+//uso do instaceof
+var User = /** @class */ (function () {
+    function User(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+    return User;
+}());
+var SuperUser = /** @class */ (function (_super) {
+    __extends(SuperUser, _super);
+    function SuperUser(name, email) {
+        return _super.call(this, name, email) || this;
+    }
+    return SuperUser;
+}(User));
+var ruan = new User("Ruan", "ruandev@code.blitz");
+var paulo = new SuperUser("paulo", "paulo@go.net");
+function chamarPessoa(user) {
+    if (user instanceof SuperUser) {
+        console.log("ola, seja bem vindo " + user.name);
+    }
+    else if (user instanceof User) {
+        console.log("ola " + user.email + ", seja bem vindo " + user.name);
+    }
+}
+chamarPessoa(ruan);
+chamarPessoa(paulo);
