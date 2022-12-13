@@ -29,7 +29,7 @@ function operarNumeros(numero: number[], operacao?: string | undefined) {
 		let multiplicatorio = numero.reduce((i, valorTotal) => i * valorTotal);
 		console.log(multiplicatorio);
 	} else {
-		console.log("Por favor insira uma Operação Disponivel (+ ou -)");
+		console.log("Por favor insira uma Operação Disponivel (+ ou - ou *)");
 	}
 }
 
@@ -134,3 +134,43 @@ function chamarPessoa(user: object) {
 
 chamarPessoa(ruan);
 chamarPessoa(paulo);
+
+//desafio de logica de programação posto de gasolina para comprar alcool com descontos
+function comprarAlcool(litros: number) {
+	let alcool = 1.9;
+	let valorTot = litros * alcool;
+
+	console.log(
+		`Quantidade de litros:${litros}, valor da Compra do alcool: ${valorTot}`
+	);
+	if (litros <= 25) {
+		let desconto = valorTot - alcool * 0.98 * litros;
+		valorTot -= desconto;
+		console.log(`Valor da compra com desconto ${valorTot} de 2%/L`);
+	} else if (litros > 25) {
+		let desconto = valorTot - alcool * 0.96 * litros;
+		valorTot -= desconto;
+		console.log(`Valor da compra com desconto ${valorTot} de 4%/L`);
+	}
+}
+comprarAlcool(55);
+
+//desafio de logica de programação posto de gasolina para comprar gasolina com descontos
+function comprarGasolina(litros: number) {
+	let gasolina = 2.7;
+	let valorTot = litros * gasolina;
+
+	console.log(
+		`Quantidade de litros:${litros}, valor da Compra da gasolina: ${valorTot}`
+	);
+	if (litros <= 25) {
+		let desconto = valorTot - gasolina * 0.97 * litros;
+		valorTot -= desconto;
+		console.log(`Valor da compra com desconto ${valorTot} de 3%/L`);
+	} else if (litros > 25) {
+		let desconto = valorTot - gasolina * 0.95 * litros;
+		valorTot -= desconto;
+		console.log(`Valor da compra com desconto ${valorTot} de 5%/L`);
+	}
+}
+ comprarGasolina(10)
