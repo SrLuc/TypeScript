@@ -1,3 +1,6 @@
+
+MODULO 1,2,3
+
 typescript adiciona confiabilidade ao programa, diminui a quantidade de bugs, consequentemente perdemos menos tempos com debug
 
 o comando node index.js roda no terminal cmd/kernel
@@ -21,4 +24,13 @@ type ID = number | string
 interfaces é como criar um tipo de dado, com meus proprios parametros e que pode ser usado como type annotation de variaveis e afins, ou seja, é bem parecido com type alias
 
 a unica diferença entra type alias e interface é que a interface pode ser alterada ao longo do codigo, ja o alias não
+
+type primitive é quando uma variavel tem um valor fixo no seu tipo, por exemplo 
+let gasolina:2.50
+
+
+MODULO 4 - Narrowing
+
+sao estratégias em TS que permite identificar o tipo de dado e com isso tomar uma decisão baseada no tipo que foi indentificado, este método é legal para atuar em tipos que podem ser imprevisiveis e queremos executar algo em cada uma das possibilidades, além disso é fundamental para evitar erros!
+
 

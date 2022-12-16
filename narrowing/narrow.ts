@@ -1,5 +1,4 @@
 // 1 - type guard
-
 function somarNumeros(x: number | string, y: number | string) {
 	if (typeof x === "string" && typeof y === "string") {
 		let resultado = parseFloat(x) + parseFloat(y);
@@ -17,7 +16,6 @@ somarNumeros("2", "6");
 somarNumeros(1, "4");
 
 // checando se valor e operação existe
-
 function operarNumeros(numero: number[], operacao?: string | undefined) {
 	if (operacao === "+") {
 		let somatorio = numero.reduce((i, valorAtual) => i + valorAtual);
@@ -39,7 +37,6 @@ operarNumeros([1, 4], "-");
 operarNumeros([4, 4, 2], "*");
 
 //exercicio de logica de programação
-
 function exibirData(
 	dia: string | number,
 	mes?: string | number,
@@ -105,7 +102,6 @@ function exibirData(
 exibirData(12, 12, 2022);
 
 //uso do instaceof
-
 class User {
 	name;
 	email;
@@ -173,4 +169,6 @@ function comprarGasolina(litros: number) {
 		console.log(`Valor da compra com desconto ${valorTot} de 5%/L`);
 	}
 }
- comprarGasolina(10)
+comprarGasolina(10);
+
+
