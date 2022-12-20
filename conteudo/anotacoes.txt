@@ -33,4 +33,22 @@ MODULO 4 - Narrowing
 
 sao estratégias em TS que permite identificar o tipo de dado e com isso tomar uma decisão baseada no tipo que foi indentificado, este método é legal para atuar em tipos que podem ser imprevisiveis e queremos executar algo em cada uma das possibilidades, além disso é fundamental para evitar erros!
 
+MODULO 5 - Funcoes
+
+rest operator é utilizado como parametro de funcao para receber mais de um valor do msm tipo
+
+os parâmetros default precisa estar sempre por ultimo na lista de argumentos
+
+MODULO 5 - OBJETOS
+
+readonly string, são string que são de leitura, ou seja, não pode ser modificada diretamente, apenas por métodos espaciais que percorrem arrays
+
+tuplas são estrutura de dados parecidos com arrays, a unica diferença é que uma tupla trabalha com tipos de dados específicos, e os arrays não
+let list:number[] = [1, 2, 3]; //Exemplo com Array
+let list:string[] = ['oi', 'eu', 'ruan'] //Exemplo com Array
+let llist:boolean[] = [true, false, false]; //Exemplo com Array
+let list: [string, number, string, boolean, number, string];  //Exemplo com tuplas
+
+type == tuplas
+
 
