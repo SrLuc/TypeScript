@@ -54,7 +54,17 @@ function avaliar(notas) {
     console.log("Media do Aluno " + resultado / 5);
 }
 var provaFabricio = [2, 5, 2, 3, 4];
-avaliar(provaFabricio);
+//avaliar(provaFabricio);
+//desafio logica de programaçaõ das notas do aluno 2
+function avaliarAluno() {
+    var notas = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        notas[_i] = arguments[_i];
+    }
+    var resultado = notas.reduce(function (nota, somatorio) { return somatorio + nota; });
+    console.log("Media do Aluno: " + resultado / notas.length);
+}
+//avaliarAluno(2, 3, 4, 5, 1);
 //exameple rest operator na função
 function somarTudo() {
     var n = [];
@@ -77,4 +87,14 @@ function mostrarDetalhesProduto(_a) {
     return "o produto " + nome + " custa " + preco;
 }
 var camisa = { nome: "polo lacoste verde", preco: 189.99 };
-//console.log(mostrarDetalhesProduto(camisa));
+function calcularPesoIdeal(dado) {
+    var idealHomen = (72.2 * dado.altura - 58).toPrecision(4);
+    var idealMulher = (62.1 * dado.altura - 44.7).toPrecision(4);
+    dado.masculino == true
+        ? console.log("Peso ideal para sua altura " + idealHomen)
+        : console.log("Peso ideal para sua altura " + idealMulher);
+}
+var ruanRickelme = { altura: 1.65, masculino: true };
+var mariaDuarda = { altura: 1.60, masculino: false };
+calcularPesoIdeal(ruanRickelme);
+calcularPesoIdeal(mariaDuarda);

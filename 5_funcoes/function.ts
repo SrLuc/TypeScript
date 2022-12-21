@@ -96,7 +96,14 @@ function avaliar(notas: exames) {
 	console.log(`Media do Aluno ${resultado / 5}`);
 }
 const provaFabricio: exames = [2, 5, 2, 3, 4];
-avaliar(provaFabricio);
+//avaliar(provaFabricio);
+
+//desafio logica de programaçaõ das notas do aluno 2
+function avaliarAluno(...notas: number[]) {
+	let resultado = notas.reduce((nota, somatorio) => somatorio + nota);
+	console.log(`Media do Aluno: ${resultado / notas.length}`);
+}
+//avaliarAluno(2, 3, 4, 5, 1);
 
 //exameple rest operator na função
 function somarTudo(...n: number[]) {
@@ -120,3 +127,25 @@ function mostrarDetalhesProduto({
 }
 const camisa = { nome: "polo lacoste verde", preco: 189.99 };
 //console.log(mostrarDetalhesProduto(camisa));
+
+
+//desafio de logica de programação do peso ideal
+interface PesoIdeal {
+	altura: number;
+	masculino: boolean;
+}
+
+function calcularPesoIdeal(dado: PesoIdeal):void {
+	let idealHomen = (72.2 * dado.altura - 58).toPrecision(4);
+	let idealMulher = (62.1 * dado.altura - 44.7).toPrecision(4);
+
+	dado.masculino == true
+		? console.log(`Peso ideal para sua altura ${idealHomen}`)
+		: console.log(`Peso ideal para sua altura ${idealMulher}`);
+}
+
+const ruanRickelme:PesoIdeal = {altura:1.65, masculino:true};
+const mariaDuarda:PesoIdeal = {altura:1.60, masculino:false};
+
+calcularPesoIdeal(ruanRickelme);
+calcularPesoIdeal(mariaDuarda)

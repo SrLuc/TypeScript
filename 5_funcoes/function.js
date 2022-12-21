@@ -55,7 +55,13 @@ function avaliar(notas) {
     console.log(`Media do Aluno ${resultado / 5}`);
 }
 const provaFabricio = [2, 5, 2, 3, 4];
-avaliar(provaFabricio);
+//avaliar(provaFabricio);
+//desafio logica de programaçaõ das notas do aluno 2
+function avaliarAluno(...notas) {
+    let resultado = notas.reduce((nota, somatorio) => somatorio + nota);
+    console.log(`Media do Aluno: ${resultado / notas.length}`);
+}
+//avaliarAluno(2, 3, 4, 5, 1);
 //exameple rest operator na função
 function somarTudo(...n) {
     return n.reduce((elemento, somatorio) => somatorio + elemento);
@@ -69,4 +75,14 @@ function mostrarDetalhesProduto({ nome, preco, }) {
     return `o produto ${nome} custa ${preco}`;
 }
 const camisa = { nome: "polo lacoste verde", preco: 189.99 };
-//console.log(mostrarDetalhesProduto(camisa));
+function calcularPesoIdeal(dado) {
+    let idealHomen = (72.2 * dado.altura - 58).toPrecision(4);
+    let idealMulher = (62.1 * dado.altura - 44.7).toPrecision(4);
+    dado.masculino == true
+        ? console.log(`Peso ideal para sua altura ${idealHomen}`)
+        : console.log(`Peso ideal para sua altura ${idealMulher}`);
+}
+const ruanRickelme = { altura: 1.65, masculino: true };
+const mariaDuarda = { altura: 1.60, masculino: false };
+calcularPesoIdeal(ruanRickelme);
+calcularPesoIdeal(mariaDuarda);
