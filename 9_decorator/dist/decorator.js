@@ -6,23 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 function teste1() {
     return function (target, propertyKey, descriptor) {
-        console.log('teste1');
+        console.log("teste1");
     };
 }
 function teste2() {
     return function (target, propertyKey, descriptor) {
-        console.log('teste2');
+        console.log("teste2");
     };
 }
 function teste3() {
     return function (target, propertyKey, descriptor) {
-        console.log('teste3');
+        console.log("teste3");
     };
 }
 var Exemplo = /** @class */ (function () {
     function Exemplo() {
     }
-    Exemplo.prototype.decorar = function () { }; //decorator é uma implementação de um método,declarador de classe, acessador, propriedade ou parametro
+    Exemplo.prototype.decorar = function () { };
     __decorate([
         teste1(),
         teste2(),
@@ -30,3 +30,22 @@ var Exemplo = /** @class */ (function () {
     ], Exemplo.prototype, "decorar");
     return Exemplo;
 }());
+//teste com decorator
+function multiplicaDecorator() {
+    return function (target, propertyKey, descriptor) {
+        console.log("Multiplicando por 5");
+    };
+}
+var multiplicarPorCinco = /** @class */ (function () {
+    function multiplicarPorCinco() {
+    }
+    multiplicarPorCinco.prototype.multiplicar = function (numero) {
+        return numero * 5;
+    };
+    __decorate([
+        multiplicaDecorator()
+    ], multiplicarPorCinco.prototype, "multiplicar");
+    return multiplicarPorCinco;
+}());
+var novoNumero = new multiplicarPorCinco();
+//console.log(novoNumero.multiplicar(5));
