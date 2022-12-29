@@ -160,6 +160,31 @@ var Bussola = /** @class */ (function () {
     return Bussola;
 }());
 var ponto = new Bussola("Norte");
-//console.log(ponto);
-//OVERRIDE DE MÉTODOS
-//somente reescrever os métodos com o mesmo nome e mudar seu conteudo
+//console.log(ponto.localizar());
+var Instrumento = /** @class */ (function () {
+    function Instrumento(notas) {
+        this.notas = notas;
+        this.notas = notas;
+    }
+    Object.defineProperty(Instrumento.prototype, "tocarNota", {
+        get: function () {
+            return this.notas;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Instrumento.prototype, "trocarNota", {
+        set: function (novaNota) {
+            if (this.notas == 5) {
+                this.acorde = this.notas;
+                novaNota = this.acorde;
+                console.log(novaNota);
+            }
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Instrumento;
+}());
+var teclado = new Instrumento(5);
+//console.log(teclado.tocarNota);

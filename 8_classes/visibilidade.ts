@@ -8,7 +8,7 @@ const bInstance = new B();
 
 bInstance.x = 5;
 
-console.log(bInstance);
+//console.log(bInstance);
 
 //testando visibilidade protegida
 
@@ -36,9 +36,9 @@ class H extends G {
 }
 
 const hInstance = new H();
-hInstance.showX();
-hInstance.showY();
-hInstance.showSomar();
+//hInstance.showX();
+//hInstance.showY();
+//hInstance.showSomar();
 
 //testando visibilidade privada
 
@@ -46,21 +46,21 @@ class Z {
     private name:string = 'Raneva';
     private id:number = 2384;
 
-    showName():string{
+    get showName():string{
         return this.name
     }
 
-    showId():number{
+    get showId():number{
         return this.id;
     }
 
-    showData(){
+    get showData(){
         return `hello ${this.name} - ${this.id}`
     }
 
 }
 
 const newChar = new Z();
-console.log(newChar.showName());
-console.log(newChar.showId());
-console.log(newChar.showData());
+//console.log(newChar.showName);
+//console.log(newChar.showId);
+//console.log(newChar.showData);

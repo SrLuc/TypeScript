@@ -9,7 +9,7 @@ class B extends A {
 }
 const bInstance = new B();
 bInstance.x = 5;
-console.log(bInstance);
+//console.log(bInstance);
 //testando visibilidade protegida
 class G {
     constructor() {
@@ -33,26 +33,26 @@ class H extends G {
     }
 }
 const hInstance = new H();
-hInstance.showX();
-hInstance.showY();
-hInstance.showSomar();
+//hInstance.showX();
+//hInstance.showY();
+//hInstance.showSomar();
 //testando visibilidade privada
 class Z {
     constructor() {
         this.name = 'Raneva';
         this.id = 2384;
     }
-    showName() {
+    get showName() {
         return this.name;
     }
-    showId() {
+    get showId() {
         return this.id;
     }
-    showData() {
+    get showData() {
         return `hello ${this.name} - ${this.id}`;
     }
 }
 const newChar = new Z();
-console.log(newChar.showName());
-console.log(newChar.showId());
-console.log(newChar.showData());
+//console.log(newChar.showName);
+//console.log(newChar.showId);
+//console.log(newChar.showData);

@@ -149,9 +149,26 @@ class Bussola implements Cordenada {
 	}
 }
 const ponto = new Bussola("Norte");
-//console.log(ponto);
+//console.log(ponto.localizar());
 
-//OVERRIDE DE MÉTODOS
-//somente reescrever os métodos com o mesmo nome e mudar seu conteudo
+class Instrumento {
+	acorde!:number;
+	constructor(public notas:number){
+		this.notas = notas;
+	}
 
+	get tocarNota():number{
+		return this.notas
+	}
 
+	set trocarNota(novaNota:number){
+		if(this.notas == 5){
+			this.acorde = this.notas;
+			novaNota = this.acorde;
+			console.log(novaNota);
+		} 
+	}
+}
+
+const teclado = new Instrumento(5);
+//console.log(teclado.tocarNota);

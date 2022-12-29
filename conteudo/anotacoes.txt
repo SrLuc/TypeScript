@@ -74,3 +74,38 @@ Visibilidade em Typescript é semelhante aos modificadores de acesso em C#
 public : não precisa declarar / qualquer propriedade ou metodo da classe pai é acessivel pela classe filha
 protected : para acessar as propriedades protected da classe, a classe filha precisar criar métodos para isso
 private: apenas e apenas a classe que delcarou o método pode utilizar e ainda assim precisa de métodos para serem acessa-la
+
+OVERRIDE de métodoso
+somente reescrever os métodos com o mesmo nome e mudar seu conteudo
+
+ Os getters e setters permitem controlar o acesso às propriedades de uma classe
+ 
+para cada propriedade da classe o getter retorna um valor
+para cad propriedadae da classe o setter atualizar um valor
+
+o getter é chamado de acessador 
+o setter é chamado de mutador
+
+throw new erro é uma função que lança um erro, o seu tipo de retorno é um never, esse retorno são para funções que nunca retornan um valor, e sim ecerram a execução de um programa
+
+MODULO 9 - DECORATORS
+
+Os decorators são um dos recursos mais poderosos oferecido pelo TypeScript, tendo como um dos principais objetivos ampliar funcionalidades de classes e métodos de forma simples e limpa. 
+
+Atualmente, os decorators são uma proposta para JavaScript e estão disponíveis como um recurso experimental no TypeScript. 
+
+Mesmo sendo um recurso experimental, eles já estão presentes em grandes projetos de código aberto, como o Angular e Inversify.
+
+Por ser um recurso experimental, para ser possível utilizar no TypeScript, é necessário habilitar no tsconfig.json:
+
+ "experimentalDecorators": true
+ 
+Um decorator é uma declaração especial para adicionar funcionalidades extras a uma 
+declaração de classe, 
+método, 
+acessador, 
+propriedade ou 
+parâmetro”.
+
+
+eles utilizam o formato @expression

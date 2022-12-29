@@ -27,7 +27,7 @@ var B = /** @class */ (function (_super) {
 }(A));
 var bInstance = new B();
 bInstance.x = 5;
-console.log(bInstance);
+//console.log(bInstance);
 //testando visibilidade protegida
 var G = /** @class */ (function () {
     function G() {
@@ -57,27 +57,39 @@ var H = /** @class */ (function (_super) {
     return H;
 }(G));
 var hInstance = new H();
-hInstance.showX();
-hInstance.showY();
-hInstance.showSomar();
+//hInstance.showX();
+//hInstance.showY();
+//hInstance.showSomar();
 //testando visibilidade privada
 var Z = /** @class */ (function () {
     function Z() {
         this.name = 'Raneva';
         this.id = 2384;
     }
-    Z.prototype.showName = function () {
-        return this.name;
-    };
-    Z.prototype.showId = function () {
-        return this.id;
-    };
-    Z.prototype.showData = function () {
-        return "hello " + this.name + " - " + this.id;
-    };
+    Object.defineProperty(Z.prototype, "showName", {
+        get: function () {
+            return this.name;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Z.prototype, "showId", {
+        get: function () {
+            return this.id;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Z.prototype, "showData", {
+        get: function () {
+            return "hello " + this.name + " - " + this.id;
+        },
+        enumerable: false,
+        configurable: true
+    });
     return Z;
 }());
 var newChar = new Z();
-console.log(newChar.showName());
-console.log(newChar.showId());
-console.log(newChar.showData());
+//console.log(newChar.showName);
+//console.log(newChar.showId);
+//console.log(newChar.showData);
